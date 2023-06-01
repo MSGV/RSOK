@@ -26,7 +26,6 @@ public class Register extends JFrame {
 	private JPanel contentPane;
 	private JTextField txtName;
 	private JTextField txtSurname;
-	private JTextField txtUsern;
 	private JTextField txtEmail;
 	private JPasswordField txtPassword;
 	
@@ -84,7 +83,7 @@ public class Register extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				if(txtName.getText().equals("") || txtSurname.getText().equals("") || txtUsern.getText().equals("") || txtEmail.getText().equals("") ||txtPassword.getText().equals("")) 
+				if(txtName.getText().equals("") || txtSurname.getText().equals("") || txtEmail.getText().equals("") ||txtPassword.getText().equals("")) 
 				{
 					JOptionPane.showMessageDialog(null, "Please Enter the necessary Information!");
 				}
@@ -93,11 +92,10 @@ public class Register extends JFrame {
 					String Name = txtName.getText();
 					String Surname = txtSurname.getText();
 					String Email = txtEmail.getText();
-					String Username = txtUsern.getText();
 					String Password = txtPassword.getText();
 					
 					Connection conn = Helper.DBSetup();
-					String query = "INSERT INTO users(Name, Surname, Username, Email, Password) VALUES ('"+Name+"', '"+Surname+"', '"+Username+"', '"+Email+"', '"+Password+"')";
+					String query = "INSERT INTO admin(ime, prezime, email, sifra) VALUES ('"+Name+"', '"+Surname+"', '"+Email+"', '"+Password+"')";
 					
 					try {
 						java.sql.Statement stm = conn.createStatement();
@@ -111,7 +109,6 @@ public class Register extends JFrame {
 				}
 				txtName.setText("");
 				txtSurname.setText("");
-				txtUsern.setText("");
 				txtEmail.setText("");
 				txtPassword.setText("");
 				
@@ -153,26 +150,17 @@ public class Register extends JFrame {
 		txtSurname.setBounds(119, 169, 161, 20);
 		contentPane.add(txtSurname);
 		
-		JLabel lblNewLabel = new JLabel("Username");
-		lblNewLabel.setBounds(176, 200, 86, 14);
-		contentPane.add(lblNewLabel);
-		
-		txtUsern = new JTextField();
-		txtUsern.setColumns(10);
-		txtUsern.setBounds(119, 225, 161, 20);
-		contentPane.add(txtUsern);
-		
 		JLabel lblNewLabel_1 = new JLabel("Password");
-		lblNewLabel_1.setBounds(176, 313, 86, 14);
+		lblNewLabel_1.setBounds(176, 267, 86, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Email Address");
-		lblNewLabel_2.setBounds(163, 256, 86, 14);
+		lblNewLabel_2.setBounds(163, 210, 86, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		txtEmail = new JTextField();
 		txtEmail.setColumns(10);
-		txtEmail.setBounds(119, 282, 161, 20);
+		txtEmail.setBounds(119, 236, 161, 20);
 		contentPane.add(txtEmail);
 		
 		JButton btnNewButton_2 = new JButton("Quit");
@@ -187,7 +175,7 @@ public class Register extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		txtPassword = new JPasswordField();
-		txtPassword.setBounds(119, 338, 161, 20);
+		txtPassword.setBounds(119, 292, 161, 20);
 		contentPane.add(txtPassword);
 	}
 

@@ -102,7 +102,7 @@ public class Login extends JFrame {
 			    	  pw+=password[i];
 			      }
 				
-			      String sql = "SELECT * FROM users WHERE Username = '"+username+"' AND Password = '"+pw+"'";
+			      String sql = "SELECT * FROM admin WHERE ime = '"+username+"' AND sifra = '"+pw+"'";
 			      
 				try{			      				      				      
 				      Statement stm = connect.createStatement();
