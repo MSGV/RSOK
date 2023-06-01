@@ -11,7 +11,11 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.border.EmptyBorder;
+
+import Resources.CRUD_Ops_Rez;
+import javax.swing.JSpinner;
 
 public class Confirmation_window extends JFrame {
 
@@ -19,6 +23,8 @@ public class Confirmation_window extends JFrame {
 	private JTextField brkk;
 	private JTextField prezime;
 	private JTextField ime;
+	private JTextField txtID;
+	private JTextField brkarata;
 
 	/**
 	 * Launch the application.
@@ -40,7 +46,7 @@ public class Confirmation_window extends JFrame {
 	 * Create the frame.
 	 */
 	public Confirmation_window() {
-		setTitle("Confirmation window");
+		setTitle("Rezervacije");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 784, 646);
 		contentPane = new JPanel();
@@ -55,7 +61,7 @@ public class Confirmation_window extends JFrame {
 		
 		brkk = new JTextField();
 		brkk.setColumns(10);
-		brkk.setBounds(180, 243, 170, 20);
+		brkk.setBounds(198, 243, 170, 20);
 		contentPane.add(brkk);
 		
 		JLabel lblNewLabel_2_2 = new JLabel("Broj kreditne kartice:");
@@ -64,7 +70,7 @@ public class Confirmation_window extends JFrame {
 		
 		prezime = new JTextField();
 		prezime.setColumns(10);
-		prezime.setBounds(180, 212, 170, 20);
+		prezime.setBounds(198, 212, 170, 20);
 		contentPane.add(prezime);
 		
 		JLabel lblNewLabel_2 = new JLabel("Prezime:");
@@ -77,14 +83,10 @@ public class Confirmation_window extends JFrame {
 		
 		ime = new JTextField();
 		ime.setColumns(10);
-		ime.setBounds(180, 181, 170, 20);
+		ime.setBounds(198, 181, 170, 20);
 		contentPane.add(ime);
 		
-		JComboBox brkartica = new JComboBox();
-		brkartica.setBounds(383, 211, 52, 22);
-		contentPane.add(brkartica);
-		
-		JButton btnNewButton = new JButton("Natrag");
+		JButton btnNewButton = new JButton("Nazad");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -103,27 +105,38 @@ public class Confirmation_window extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-			//	if() {
-					
-			//	}
-		//		else {
+				try
+				{
+					CRUD_Ops_Rez.Rezervacija(ime.getText(), prezime.getText(), brkk.getText(), brkarata.getText());
+				}
+				catch(Exception ex) {
+					JOptionPane.showMessageDialog(null, ex.getMessage());
+				}
+			
 				
-				dispose();
-				
-				JOptionPane.showMessageDialog(null,String.valueOf("Rezervacija uspesno obavljena!"));	
-				
-				Reservation_Menu MM = new Reservation_Menu();
-		    	MM.setVisible(true);
-		    	
-				
-			//	}
+				ime.setText("");
+				prezime.setText("");
+				brkk.setText("");
+				brkarata.setText("");
+			
 			}
 		});
 		btnNewButton_1.setBounds(669, 573, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel = new JLabel("Broj karata za rezervaciju:");
-		lblNewLabel.setBounds(383, 187, 184, 14);
+		lblNewLabel.setBounds(10, 277, 184, 14);
 		contentPane.add(lblNewLabel);
+		
+		txtID = new JTextField();
+		txtID.setColumns(10);
+		txtID.setBounds(198, 305, 48, 20);
+		txtID.setVisible(false);
+		contentPane.add(txtID);
+		
+		brkarata = new JTextField();
+		brkarata.setBounds(198, 274, 170, 20);
+		contentPane.add(brkarata);
+		brkarata.setColumns(10);
 	}
 }
