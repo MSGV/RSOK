@@ -56,7 +56,7 @@ public class DobaDniosaurusa extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\TREX.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\TREX.png"));
 		lblNewLabel.setBounds(20, 48, 571, 373);
 		contentPane.add(lblNewLabel);
 		
@@ -67,7 +67,7 @@ public class DobaDniosaurusa extends JFrame {
 		contentPane.add(txtpnTrexTiranosaurusReks);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Triceps.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Triceps.jpg"));
 		lblNewLabel_1.setBounds(970, 48, 565, 373);
 		contentPane.add(lblNewLabel_1);
 		
@@ -78,7 +78,7 @@ public class DobaDniosaurusa extends JFrame {
 		contentPane.add(txtpnTriceratopsTriceratopstrorogo);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Stegosaurus.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Stegosaurus.jpg"));
 		lblNewLabel_2.setBounds(20, 432, 571, 359);
 		contentPane.add(lblNewLabel_2);
 		
@@ -89,7 +89,7 @@ public class DobaDniosaurusa extends JFrame {
 		contentPane.add(txtpnStegosaurusStegosaurus);
 		
 		JLabel lblNewLabel_3 = new JLabel("New label");
-		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Herrerasaurus.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Herrerasaurus.jpg"));
 		lblNewLabel_3.setBounds(970, 432, 565, 359);
 		contentPane.add(lblNewLabel_3);
 		
@@ -98,5 +98,10 @@ public class DobaDniosaurusa extends JFrame {
 		txtpnHerrerasaurusHerrerasaurusJe.setText("\r\nHerrerasaurus\r\n\r\nHerrerasaurus je rod saurišijanskih dinosaurusa iz perioda kasnog trijasa. Ovaj rod je bio jedan od najranijih dinosaurusa iz fosilnih zapisa. Njegovo ime znači \"Ererin gušter\", po rančeru koji je 1958. otkrio prvi primerak u Južnoj Americi. Svi poznati fosili ovog mesoždera otkriveni su u formaciji Išigualasto iz karnijanskog doba (kasni trijas prema ICS-u, datirano pre 231,4 miliona godina) u severozapadnoj Argentini. Tipsku vrstu, Herrerasaurus ischigualastensis, opisao je Osvaldo Reig 1963. godine i jedina je vrsta koja je dodeljena ovom rodu. Ischisaurus i Frenguellisaurus su sinonimi.\r\n\r\nDugi niz godina, klasifikacija Herrerasaurusa bila je nejasna jer je bio poznat po veoma fragmentarnim ostacima. Pretpostavljalo se da se radi o bazalnom teropodu, bazalnom sauropodomorfu, bazalnom saurišiju ili da uopšte nije dinosaurus, već druga vrsta arhosaurusa. Međutim, sa otkrićem gotovo kompletnog kostura i lobanje 1988. godine, Herrerasaurus je klasifikovan kao rani saurišjan u većini filogenosti o poreklu i ranoj evoluciji dinosaurusa. \r\nTo je član Herrerasauridae, porodice sličnih rodova koji su bili među najranijim evolucionim zračenjem dinosaurusa.");
 		txtpnHerrerasaurusHerrerasaurusJe.setBounds(1545, 432, 359, 390);
 		contentPane.add(txtpnHerrerasaurusHerrerasaurusJe);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setIcon(new ImageIcon(AntickoDoba.class.getResource("/Images/background.png")));
+		lblNewLabel_4.setBounds(0, 0, 1904, 1041);
+		contentPane.add(lblNewLabel_4);
 	}
 }
