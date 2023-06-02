@@ -119,6 +119,12 @@ public class AntickoDoba extends JFrame {
 		txtpnNefertitiNefertitiNefertitis.setText("Nefertiti\r\n\r\nNefertiti, Nefertitis ili Nofretete je bila \u017Eena egipatskog faraona Amenhotepa IV (Ahenatona). Njeno ime pribli\u017Eno zna\u010Di \u201Elepotica je stigla\u201C. Iako je jedna od najpopularnijih li\u010Dnosti Starog Egipta, danas je od nje sa\u010Duvano veoma malo predmeta, od kojih je najpoznatija njena bista, koja se \u010Duva u muzeju u Berlinu. U istoriji je upam\u0107ena po verskoj reformi, koju je sprovela u Egiptu zajedno sa svojim mu\u017Eem, faraonom Amenhotepom IV. \r\n\r\nNefertiti postaje istorijska li\u010Dnost od udaje za Ahenatona. Veruje se da ju je na to mesto dovela kraljica Tij, tada\u0161nja vladarka Egipta, a ro\u0111ena sestra Nefertitinog oca Aja. Ona je svoju ne\u0107aku udala za svog sina, s' namerom da ga ova odvoji od monoteizma. Me\u0111utim, Nefertiti je i\u0161la ka tome da u\u010Dvrsti svoj polo\u017Eaj glavne supruge, ba\u0161 tako \u0161to \u0107e Ahenatonu pomagati u nastojanjima da Egipat prevede na monoteisti\u010Dku veru. Ona i faraon su verovali u Atona, boga svetlosti i njemu u \u010Dast podigli novu prestonicu - Amarnu. Preseljenje prestonice iz Tebe, koja je bila vekovno sedi\u0161te Egipta bilo je ravno revoluciji. ");
 		txtpnNefertitiNefertitiNefertitis.setBounds(1454, 678, 404, 318);
 		contentPane.add(txtpnNefertitiNefertitiNefertitis);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon(AntickoDoba.class.getResource("/Images/background.png")));
+		lblNewLabel_6.setBounds(0, 0, 1904, 1041);
+		contentPane.add(lblNewLabel_6);
+		
 	}
 
 }

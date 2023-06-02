@@ -56,7 +56,7 @@ public class SSSRT extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Screenshot 2023-05-01 212056.png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Screenshot 2023-05-01 212056.png"));
 		lblNewLabel.setBounds(10, 11, 600, 334);
 		contentPane.add(lblNewLabel);
 		
@@ -67,7 +67,7 @@ public class SSSRT extends JFrame {
 		contentPane.add(txtpnIsIsruski);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\KV1.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\KV1.png"));
 		lblNewLabel_1.setBounds(939, 11, 600, 334);
 		contentPane.add(lblNewLabel_1);
 		
@@ -78,7 +78,7 @@ public class SSSRT extends JFrame {
 		contentPane.add(txtpnKvTenkoviKliment);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\T3485.png"));
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\T3485.png"));
 		lblNewLabel_2.setBounds(10, 366, 600, 334);
 		contentPane.add(lblNewLabel_2);
 		
@@ -89,7 +89,7 @@ public class SSSRT extends JFrame {
 		contentPane.add(txtpnTSerijaTenkova);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("New label");
-		lblNewLabel_2_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\T26.png"));
+		lblNewLabel_2_1.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\T26.png"));
 		lblNewLabel_2_1.setBounds(939, 366, 600, 334);
 		contentPane.add(lblNewLabel_2_1);
 		
@@ -98,5 +98,10 @@ public class SSSRT extends JFrame {
 		txtpnTTenkT.setText("T-26\r\n\r\nTenk T-26 je bio sovjetski laki tenk korišćen tokom mnogih sukoba u međuratnom periodu i u Drugom svetskom ratu. Bio je to razvoj britanskog tenka Vickers od 6 tona i bio je jedan od najuspešnijih dizajna tenkova 1930-ih sve dok njegov laki oklop nije postao ranjiv na novije protivtenkovske topove. Proizveden je u većim brojrvima nego bilo koji drugi tenk iz tog perioda, sa više od 11.000 proizvedenih jedinica. Tokom 1930-ih, SSSR je razvio 53 varijante T-26, uključujući tenkove za bacanje plamena, borbena inženjerijska vozila, tenkove na daljinsko upravljanje, samohodne topove, artiljerijske traktore i oklopne transportere. Dvadeset tri od njih su serijski proizvedeni, drugi su bili eksperimentalni modeli.");
 		txtpnTTenkT.setBounds(1549, 366, 296, 334);
 		contentPane.add(txtpnTTenkT);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon(AntickoDoba.class.getResource("/Images/background.png")));
+		lblNewLabel_6.setBounds(0, 0, 1904, 1041);
+		contentPane.add(lblNewLabel_6);
 	}
 }

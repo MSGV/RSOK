@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class Exibits extends JFrame {
 
@@ -76,7 +77,7 @@ public class Exibits extends JFrame {
 				DD.setVisible(true);
 			}
 		});
-		btnUmetnostiRenesanse.setBounds(246, 142, 260, 23);
+		btnUmetnostiRenesanse.setBounds(246, 169, 260, 23);
 		contentPane.add(btnUmetnostiRenesanse);
 		
 		JLabel lblNewLabel = new JLabel("Spisak Izložbi Muzeja");
@@ -95,6 +96,21 @@ public class Exibits extends JFrame {
 		});
 		btnNewButton_1.setBounds(338, 463, 89, 23);
 		contentPane.add(btnNewButton_1);
+		
+		JButton btnRenesansa = new JButton("Renesansa");
+		btnRenesansa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				Renesansa RE = new Renesansa();
+				RE.setVisible(true);
+			}
+		});
+		btnRenesansa.setBounds(246, 139, 260, 23);
+		contentPane.add(btnRenesansa);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon(Exibits.class.getResource("/Images/backgroundexibit.png")));
+		lblNewLabel_1.setBounds(0, 0, 749, 497);
+		contentPane.add(lblNewLabel_1);
 	}
-
 }

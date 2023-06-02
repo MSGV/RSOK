@@ -57,7 +57,7 @@ public class SSSRP extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Mosin_nagant_m9130_from_cia.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Mosin_nagant_m9130_from_cia.jpg"));
 		lblNewLabel.setBounds(63, 33, 603, 183);
 		contentPane.add(lblNewLabel);
 		
@@ -74,7 +74,7 @@ public class SSSRP extends JFrame {
 		contentPane.add(txtpnMosinnagantMCarbine);
 		
 		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\SVT-38_-_Ryssland_-_AM.045576.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\SVT-38_-_Ryssland_-_AM.045576.jpg"));
 		lblNewLabel_2.setBounds(63, 380, 603, 245);
 		contentPane.add(lblNewLabel_2);
 		
@@ -85,7 +85,7 @@ public class SSSRP extends JFrame {
 		contentPane.add(txtpnTokarevSvtSvt);
 		
 		JLabel lblNewLabel_2_1 = new JLabel("New label");
-		lblNewLabel_2_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\AVS-36_-_Ryssland_-_AM.123596.jpg"));
+		lblNewLabel_2_1.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\AVS-36_-_Ryssland_-_AM.123596.jpg"));
 		lblNewLabel_2_1.setBounds(928, 399, 603, 245);
 		contentPane.add(lblNewLabel_2_1);
 		
@@ -96,7 +96,7 @@ public class SSSRP extends JFrame {
 		contentPane.add(txtpnSimonovAvsAvs);
 		
 		JLabel lblNewLabel_2_2 = new JLabel("New label");
-		lblNewLabel_2_2.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\PPSh-41_from_soviet.jpg"));
+		lblNewLabel_2_2.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\PPSh-41_from_soviet.jpg"));
 		lblNewLabel_2_2.setBounds(63, 665, 603, 245);
 		contentPane.add(lblNewLabel_2_2);
 		
@@ -107,7 +107,7 @@ public class SSSRP extends JFrame {
 		contentPane.add(txtpnPpshPpshrus);
 		
 		JLabel lblNewLabel_2_3 = new JLabel("New label");
-		lblNewLabel_2_3.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\PPS-43_Soviet_7.62_mm_submachine_gun.jpg"));
+		lblNewLabel_2_3.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\PPS-43_Soviet_7.62_mm_submachine_gun.jpg"));
 		lblNewLabel_2_3.setBounds(928, 665, 603, 245);
 		contentPane.add(lblNewLabel_2_3);
 		
@@ -118,8 +118,13 @@ public class SSSRP extends JFrame {
 		contentPane.add(txtpnPpsPps);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Mosin-Nagant_karbin_m1938_Ryssland_-_AM.032891.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\user\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Mosin-Nagant_karbin_m1938_Ryssland_-_AM.032891.jpg"));
 		lblNewLabel_1.setBounds(928, 33, 603, 251);
 		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon(AntickoDoba.class.getResource("/Images/background.png")));
+		lblNewLabel_6.setBounds(0, 0, 1904, 1041);
+		contentPane.add(lblNewLabel_6);
 	}
 }

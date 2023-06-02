@@ -62,12 +62,12 @@ public class SSSRTU extends JFrame {
 		contentPane.add(txtpnLetnjaUniformaManeken);
 		
 		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\WW2_Soviet_Russian_Red_Army_summer_uniform_Senior_lieutenant_gymnastiorka_steel_helmet_PP_sh_41_machine_gun_Lofoten_Krigsminnemuseum_Norway_banner_2019_0229.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(SSSRTU.class.getResource("/Images/WW2_Soviet_Russian_Red_Army_summer_uniform_Senior_lieutenant_gymnastiorka_steel_helmet_PP_sh_41_machine_gun_Lofoten_Krigsminnemuseum_Norway_banner_2019_0229.jpg")));
 		lblNewLabel.setBounds(26, 11, 316, 503);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Padobranska garda.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon(SSSRTU.class.getResource("/Images/Padobranska garda.jpg")));
 		lblNewLabel_1.setBounds(685, 11, 229, 500);
 		contentPane.add(lblNewLabel_1);
 		
@@ -78,7 +78,7 @@ public class SSSRTU extends JFrame {
 		contentPane.add(txtpnSovjetskiIzviakiPaket);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("New label");
-		lblNewLabel_1_1.setIcon(new ImageIcon("C:\\Users\\Legion\\eclipse-workspace\\SOK seminarski rad\\src\\Images\\Inzenjerska uniforma.jpg"));
+		lblNewLabel_1_1.setIcon(new ImageIcon(SSSRTU.class.getResource("/Images/Inzenjerska uniforma.jpg")));
 		lblNewLabel_1_1.setBounds(1219, 11, 317, 500);
 		contentPane.add(lblNewLabel_1_1);
 		
@@ -87,5 +87,10 @@ public class SSSRTU extends JFrame {
 		txtpnInenjerskeUniformeJurine.setText("Inženjerske uniforme\r\n\r\nJurišne inžinjerijske i saperske brigade formirane su od inžinjerijskih trupa Rezerve Vrhovne komande Crvene armije (RVGK), namenjene su za juriš prilagođen odbrani naselja i za razbijanje snažno utvrđene odbrane fronta. Glavna prepoznatljiva karakteristika sapera bila je izdavanje pancira SN-42, ekvivalenta savremenim prslucima iz Drugog svetskog rata. Neobičan oblik oklopa je dizajniran da zaštiti glavne vitalne organe sapera, napravljen je od čelika debljine 2 mm i težak 3,5 kg, njegov razvoj je počeo 1938. dok konačni dizajn nije izdat Crvenoj armiji 1942. godine i korišćen je. da bi se tokom bitke za Staljingrad iste godine izvršile borbe od kuće do kuće.\r\n\r\nNosili su standardne sovjetske pešadijske uniforme sa jednim od prvih telesnih zaštitnih oklopa.");
 		txtpnInenjerskeUniformeJurine.setBounds(1546, 11, 317, 500);
 		contentPane.add(txtpnInenjerskeUniformeJurine);
+		
+		JLabel lblNewLabel_6 = new JLabel("New label");
+		lblNewLabel_6.setIcon(new ImageIcon(AntickoDoba.class.getResource("/Images/background.png")));
+		lblNewLabel_6.setBounds(0, 0, 1904, 1041);
+		contentPane.add(lblNewLabel_6);
 	}
 }

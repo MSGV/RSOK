@@ -1,13 +1,15 @@
 package Views;
 
 import java.awt.EventQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class WW2 extends JFrame {
 
@@ -69,7 +71,6 @@ public class WW2 extends JFrame {
 		JButton btnNewButton_3 = new JButton("SAD Naoruzanje");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				dispose();
 				AmerikaOruzje AO = new AmerikaOruzje();
 				AO.setVisible(true);
@@ -81,10 +82,9 @@ public class WW2 extends JFrame {
 		JButton btnNewButton_4 = new JButton("Nemacke uniforme");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				dispose();
-				NemackaUniforma NA = new NemackaUniforma();
-				NA.setVisible(true);
+				NemackaUniforma NU = new NemackaUniforma();
+				NU.setVisible(true);
 			}
 		});
 		btnNewButton_4.setBounds(177, 11, 161, 62);
@@ -123,7 +123,7 @@ public class WW2 extends JFrame {
 		btnNewButton_7.setBounds(989, 387, 161, 62);
 		contentPane.add(btnNewButton_7);
 		
-		JButton btnNewButton_8 = new JButton("Sovjetsko Naoru≈æanje");
+		JButton btnNewButton_8 = new JButton("Sovjetsko Naoruûanje");
 		btnNewButton_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -158,6 +158,10 @@ public class WW2 extends JFrame {
 		});
 		btnNewButton_10.setBounds(10, 567, 89, 23);
 		contentPane.add(btnNewButton_10);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(WW2.class.getResource("/Images/backgroundww2.png")));
+		lblNewLabel.setBounds(0, 0, 1160, 597);
+		contentPane.add(lblNewLabel);
 	}
-
 }
