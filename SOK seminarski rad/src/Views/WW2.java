@@ -1,13 +1,13 @@
 package Views;
 
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 public class WW2 extends JFrame {
 
@@ -43,6 +43,13 @@ public class WW2 extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton btnNewButton = new JButton("Nemacko naoruzanje");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				NemackaOruzje NO = new NemackaOruzje();
+				NO.setVisible(true);
+			}
+		});
 		btnNewButton.setBounds(447, 11, 161, 62);
 		contentPane.add(btnNewButton);
 		
@@ -60,22 +67,59 @@ public class WW2 extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_3 = new JButton("SAD Naoruzanje");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				AmerikaOruzje AO = new AmerikaOruzje();
+				AO.setVisible(true);
+			}
+		});
 		btnNewButton_3.setBounds(989, 158, 161, 62);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton_4 = new JButton("Nemacke uniforme");
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				NemackaUniforma NA = new NemackaUniforma();
+				NA.setVisible(true);
+			}
+		});
 		btnNewButton_4.setBounds(177, 11, 161, 62);
 		contentPane.add(btnNewButton_4);
 		
 		JButton btnNewButton_5 = new JButton("Nemacki tenkovi");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				NemackaTenk NT = new NemackaTenk();
+				NT.setVisible(true);
+			}
+		});
 		btnNewButton_5.setBounds(733, 11, 161, 62);
 		contentPane.add(btnNewButton_5);
 		
 		JButton btnNewButton_6 = new JButton("SAD Uniforme");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				AmerikaUniforma AU = new AmerikaUniforma();
+				AU.setVisible(true);
+			}
+		});
 		btnNewButton_6.setBounds(989, 275, 161, 62);
 		contentPane.add(btnNewButton_6);
 		
 		JButton btnNewButton_7 = new JButton("SAD Tenkovi");
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				AmerikaTenk AT = new AmerikaTenk();
+				AT.setVisible(true);
+			}
+		});
 		btnNewButton_7.setBounds(989, 387, 161, 62);
 		contentPane.add(btnNewButton_7);
 		

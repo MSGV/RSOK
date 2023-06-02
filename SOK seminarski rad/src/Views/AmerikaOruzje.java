@@ -48,8 +48,8 @@ public class AmerikaOruzje extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Exibits EX = new Exibits();
-				EX.setVisible(true);
+				WW2 WW = new WW2();
+				WW.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(10, 1007, 89, 23);
@@ -121,4 +121,3 @@ public class AmerikaOruzje extends JFrame {
 		contentPane.add(txtpnKarbinerKarabin);
 	}
 }
-
