@@ -10,11 +10,11 @@ import java.sql.SQLException;
 
 public class Helper {
 
-	public Connection DBSetup() {
+	public static Connection DBSetup() {
 		
 		Connection conn = null;
 		 
-		String URL ="jdbc:mysql://root@localhost:3306/vojska";
+		String URL ="jdbc:mysql://root@localhost:3306/emuzej";
 		String usr = "root";
 		String pass = "root";
 		
