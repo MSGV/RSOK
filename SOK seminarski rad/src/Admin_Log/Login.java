@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+import Resources.CRUD_Ops_Log;
 import Views.Reservation_Menu;
 
 public class Login extends JFrame {
@@ -28,7 +29,7 @@ public class Login extends JFrame {
 		
 	
 	private JPanel contentPane;
-	private JTextField txtKorisnickoime;
+	private JTextField txtIme;
 	private JPasswordField txtLozinka;
 	public int ID;
 	
@@ -51,41 +52,41 @@ public class Login extends JFrame {
 
 		setBackground(new Color(255, 0, 0));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 370, 589);
+		setBounds(100, 100, 370, 446);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel Wlcome = new JLabel("Welcome");
+		JLabel Wlcome = new JLabel("Dobrodošli");
 		Wlcome.setFont(new Font("Tahoma", Font.BOLD, 20));
 		Wlcome.setForeground(Color.DARK_GRAY);
 		Wlcome.setHorizontalAlignment(SwingConstants.CENTER);
 		Wlcome.setBounds(0, 11, 354, 32);
 		contentPane.add(Wlcome);
 		
-		JLabel Username = new JLabel("Username");
-		Username.setBackground(new Color(128, 0, 0));
-		Username.setFont(new Font("Tahoma", Font.BOLD, 14));
-		Username.setHorizontalAlignment(SwingConstants.CENTER);
-		Username.setBounds(10, 290, 135, 17);
-		contentPane.add(Username);
+		JLabel Name = new JLabel("Ime");
+		Name.setBackground(new Color(128, 0, 0));
+		Name.setFont(new Font("Tahoma", Font.BOLD, 14));
+		Name.setHorizontalAlignment(SwingConstants.CENTER);
+		Name.setBounds(8, 144, 135, 17);
+		contentPane.add(Name);
 		
-		JLabel Password = new JLabel("Password");
+		JLabel Password = new JLabel("Šifra");
 		Password.setFont(new Font("Tahoma", Font.BOLD, 14));
 		Password.setHorizontalAlignment(SwingConstants.CENTER);
-		Password.setBounds(10, 335, 135, 17);
+		Password.setBounds(8, 189, 135, 17);
 		contentPane.add(Password);
 		
 		txtLozinka = new JPasswordField();
-		txtLozinka.setBounds(155, 334, 189, 18);
+		txtLozinka.setBounds(155, 189, 189, 18);
 		contentPane.add(txtLozinka);
 		
-		txtKorisnickoime = new JTextField();
-		txtKorisnickoime.setBounds(155, 289, 189, 18);
-		contentPane.add(txtKorisnickoime);
-		txtKorisnickoime.setColumns(10);
+		txtIme = new JTextField();
+		txtIme.setBounds(155, 144, 189, 18);
+		contentPane.add(txtIme);
+		txtIme.setColumns(10);
 		
 				
 		
@@ -93,9 +94,10 @@ public class Login extends JFrame {
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 					 
+				//CRUD_Ops_Log.Login(txtIme, txtLozinka);
 				Connection connect = Helper.DBSetup();
 				
-				String username = txtKorisnickoime.getText();
+				String username = txtIme.getText();
 			      char[] password = txtLozinka.getPassword();
 			      String pw = "";
 			      for(int i = 0; i < password.length; i++ ) {
@@ -130,10 +132,10 @@ public class Login extends JFrame {
 			}
 		});
 		btnLogin.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnLogin.setBounds(102, 514, 147, 25);
+		btnLogin.setBounds(102, 369, 147, 25);
 		contentPane.add(btnLogin);
 		
-		JButton btnRegister = new JButton("Register");
+		JButton btnRegister = new JButton("Registruj se");
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -143,13 +145,8 @@ public class Login extends JFrame {
 			}
 		});
 		btnRegister.setFont(new Font("Tahoma", Font.BOLD, 14));
-		btnRegister.setBounds(102, 467, 147, 23);
+		btnRegister.setBounds(102, 322, 147, 23);
 		contentPane.add(btnRegister);
-		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(null);
-		lblNewLabel.setBounds(48, 54, 256, 225);
-		contentPane.add(lblNewLabel);
 		
 		
 	

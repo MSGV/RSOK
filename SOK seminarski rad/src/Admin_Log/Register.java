@@ -1,33 +1,31 @@
 package Admin_Log;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 import Common.Helper;
 import Common.HelperPrikaz;
-
-import javax.swing.JButton;
-import java.awt.Font;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.awt.event.ActionEvent;
-import java.awt.SystemColor;
-import javax.swing.JPasswordField;
-import java.awt.Color;
+import Resources.CRUD_Ops_Log;
 
 public class Register extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField txtName;
-	private JTextField txtSurname;
+	private JTextField txtime;
+	private JTextField txtprezime;
 	private JTextField txtEmail;
-	private JPasswordField txtPassword;
+	private JPasswordField txtsifra;
 	
 	static Helper Helper = new Helper();
 	HelperPrikaz HelperP = new HelperPrikaz();
@@ -79,39 +77,22 @@ public class Register extends JFrame {
 		btnNewButton_1.setBounds(152, 460, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton = new JButton("Complete Registration");
+		JButton btnNewButton = new JButton("Kompletiraj Registraciju");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				if(txtName.getText().equals("") || txtSurname.getText().equals("") || txtEmail.getText().equals("") ||txtPassword.getText().equals("")) 
+				try
 				{
-					JOptionPane.showMessageDialog(null, "Please Enter the necessary Information!");
-				}
-				else {
-					
-					String Name = txtName.getText();
-					String Surname = txtSurname.getText();
-					String Email = txtEmail.getText();
-					String Password = txtPassword.getText();
-					
-					Connection conn = Helper.DBSetup();
-					String query = "INSERT INTO admin(ime, prezime, email, sifra) VALUES ('"+Name+"', '"+Surname+"', '"+Email+"', '"+Password+"')";
-					
-					try {
-						java.sql.Statement stm = conn.createStatement();
-						stm.execute(query);
-					}
-					catch(Exception be){
-							be.printStackTrace();
-					}
-					
-					JOptionPane.showMessageDialog(null, "Information Successfully Added!");
-				}
-				txtName.setText("");
-				txtSurname.setText("");
-				txtEmail.setText("");
-				txtPassword.setText("");
+				CRUD_Ops_Log.Registracija(txtime.getText(), txtprezime.getText(), txtEmail.getText(), txtsifra.getText());
 				
+				}
+				catch(Exception ex) {
+					JOptionPane.showMessageDialog(null, ex.getMessage());
+				}
+				
+				txtime.setText("");
+				txtprezime.setText("");
+				txtEmail.setText("");
+				txtsifra.setText("");
 				
 				dispose();
 				Login li = new Login();
@@ -123,38 +104,38 @@ public class Register extends JFrame {
 		btnNewButton.setBounds(101, 413, 193, 23);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblNewLabel_5 = new JLabel("REGISTRATION");
+		JLabel lblNewLabel_5 = new JLabel("Registracija");
 		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblNewLabel_5.setBounds(134, 11, 128, 14);
 		contentPane.add(lblNewLabel_5);
 		
-		JLabel lblNewLabel_6 = new JLabel("Please Enter The Necesary credentials to register!");
+		JLabel lblNewLabel_6 = new JLabel("Molimo vas da unesete neophodne podatke za registraciju!");
 		lblNewLabel_6.setBounds(81, 53, 308, 14);
 		contentPane.add(lblNewLabel_6);
 		
-		JLabel lblNewLabel_3 = new JLabel("Name");
+		JLabel lblNewLabel_3 = new JLabel("Ime");
 		lblNewLabel_3.setBounds(180, 88, 89, 14);
 		contentPane.add(lblNewLabel_3);
 		
-		txtName = new JTextField();
-		txtName.setColumns(10);
-		txtName.setBounds(119, 113, 161, 20);
-		contentPane.add(txtName);
+		txtime = new JTextField();
+		txtime.setColumns(10);
+		txtime.setBounds(119, 113, 161, 20);
+		contentPane.add(txtime);
 		
-		JLabel lblNewLabel_4 = new JLabel("Surname");
+		JLabel lblNewLabel_4 = new JLabel("Prezime");
 		lblNewLabel_4.setBounds(176, 144, 86, 14);
 		contentPane.add(lblNewLabel_4);
 		
-		txtSurname = new JTextField();
-		txtSurname.setColumns(10);
-		txtSurname.setBounds(119, 169, 161, 20);
-		contentPane.add(txtSurname);
+		txtprezime = new JTextField();
+		txtprezime.setColumns(10);
+		txtprezime.setBounds(119, 169, 161, 20);
+		contentPane.add(txtprezime);
 		
-		JLabel lblNewLabel_1 = new JLabel("Password");
+		JLabel lblNewLabel_1 = new JLabel("Šifra");
 		lblNewLabel_1.setBounds(176, 267, 86, 14);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("Email Address");
+		JLabel lblNewLabel_2 = new JLabel("Email Adresa");
 		lblNewLabel_2.setBounds(163, 210, 86, 14);
 		contentPane.add(lblNewLabel_2);
 		
@@ -163,7 +144,7 @@ public class Register extends JFrame {
 		txtEmail.setBounds(119, 236, 161, 20);
 		contentPane.add(txtEmail);
 		
-		JButton btnNewButton_2 = new JButton("Quit");
+		JButton btnNewButton_2 = new JButton("Izlaz");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -174,9 +155,9 @@ public class Register extends JFrame {
 		btnNewButton_2.setBounds(152, 528, 89, 23);
 		contentPane.add(btnNewButton_2);
 		
-		txtPassword = new JPasswordField();
-		txtPassword.setBounds(119, 292, 161, 20);
-		contentPane.add(txtPassword);
+		txtsifra = new JPasswordField();
+		txtsifra.setBounds(119, 292, 161, 20);
+		contentPane.add(txtsifra);
 	}
 
 }

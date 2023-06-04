@@ -48,6 +48,7 @@ public class Lista_Rezervacija extends JFrame {
 		});
 	}
 	public Lista_Rezervacija() {
+		setBackground(new Color(92, 90, 90));
 		
 		initComponents();
 		CRUD_Ops_Rez.prikaz(table);
